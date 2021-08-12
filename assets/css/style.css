@@ -1,0 +1,287 @@
+/* GERAL */
+html, body, header, main, footer, article, div, span, p, a, figure, img, small, ul, li{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    outline: none;
+    list-style: none;
+}
+.container{
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+.hidden{
+    display: none;
+}
+
+
+/* BODY */
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* HEADER */
+header{
+    padding: 12px 0;
+    border-bottom: 2px solid #DBDBDB;
+}
+header .container{}
+header .linha{
+    display: flex;
+    justify-content: space-between;
+}
+header .linha__coluna{}
+header a{}
+header a figure{}
+header a figure img{
+    width: 115px;
+}
+header ul{}
+header ul li{
+    display: inline-block;
+}
+header ul li a{}
+header ul li a img{
+    width: 18px;
+}
+
+/* FOOTER */
+
+
+/* PÁGINA INICIAL */
+main{
+    overflow-x: hidden;
+    background-color: #FAFAFA;
+    padding: 30px 0;
+}
+main article{}
+main article .container{}
+main article .secaoSobreUsuario{}
+main article .secaoSobreUsuario .linha{}
+main article .secaoSobreUsuario .linha__coluna{}
+main article .secaoSobreUsuario figure{
+    width: 100%;
+    border: solid 2px #ff9696;
+    border-radius: 100%;
+    padding: 4px;
+}
+main article .secaoSobreUsuario figure img{
+    display: block;
+    width: 100%;
+}
+main article .secaoSobreUsuario .sobreUsuario{}
+main article .secaoSobreUsuario .sobreUsuario__nome{
+    display: flex;
+    align-items: center;
+}
+main article .secaoSobreUsuario .sobreUsuario__nome h2{
+    margin: 0;
+    font-size: 1.1rem;
+    margin-right: 10px;
+}
+main article .secaoSobreUsuario .sobreUsuario__nome button{
+    font-size: 0.7rem;
+    padding: 7px 4px;
+    background-color: transparent;
+    border: 1px solid #DBDBDB;
+    border-radius: 2px;
+    font-weight: 600;
+}
+main article .secaoSobreUsuario .sobreUsuario__seguidores{
+    margin-top: 20px;
+}
+main article .secaoSobreUsuario .sobreUsuario__seguidores ul{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+main article .secaoSobreUsuario .sobreUsuario__seguidores ul li{}
+main article .secaoSobreUsuario .sobreUsuario__seguidores ul li a{
+    color: #000;
+    font-size: 0.9rem;
+}
+main article .secaoSobreUsuario .sobreUsuario__seguidores ul li a strong{}
+main article .secaoSobreUsuario .sobreUsuario__descricao{
+    margin-top: 25px;
+}
+main article .secaoSobreUsuario .sobreUsuario__descricao h3{
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+main article .secaoSobreUsuario .sobreUsuario__descricao p{
+    font-size: 0.8rem;
+}
+main article .secaoSobreUsuario .sobreUsuario__descricao p a{
+    color: #00376B;
+    font-weight: 600;
+}
+
+main article .secaoDestaquesUsuario{}
+main article .secaoDestaquesUsuario ul{
+    display: flex;
+    margin-top: 30px;
+    overflow-x: scroll;
+}
+main article .secaoDestaquesUsuario ul li{
+    text-align: center;
+    margin-right: 10px;
+}
+main article .secaoDestaquesUsuario ul li figure{}
+main article .secaoDestaquesUsuario ul li figure img{
+    width: 60px;
+}
+main article .secaoDestaquesUsuario ul li h3{
+    font-size: 0.6rem;
+    margin: 0;
+}
+
+
+.feed{}
+.feed nav{}
+.feed .feed__menu{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    border-top: solid 1px #ccc;
+}
+.feed .feed__menu li{
+    position: relative;
+}
+.feed .feed__menu li.ativo::before{
+    content: "";
+    display: block;
+    padding-top: 10px;
+    border-top: solid 2px #878787;
+    position: absolute;
+    top: -1px;
+    width: 100%;
+}
+.feed .feed__menu li a{
+    font-size: 12px;
+    padding: 0 5px;
+    font-weight: bold;
+    color: #000;
+}
+
+.feed__galeria
+{
+
+}
+
+.feed__galeria ul{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.feed__galeria ul li{
+    width: 100%;
+    max-width: 259px;
+    height: 259px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.feed__galeria ul li figure{}
+.feed__galeria ul li img{
+    width: 100%;
+}
+.feed__galeria ul li figcaption{}
+
+/* EXTRAS */
+
+
+/* @media */
+@media screen and (min-width: 620px){
+    main article .secaoSobreUsuario .linha{
+        display: flex;
+    }
+    main article .secaoSobreUsuario .linha__coluna--esquerda{
+        flex-basis: 45%;
+    }
+    main article .secaoDestaquesUsuario ul {
+        justify-content: space-between;
+    }
+    .container {
+        max-width: 590px;
+    }
+    .feed__galeria ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .feed .feed__menu li{
+        margin: 0 22px;
+    }
+}
+
+@media screen and (min-width: 840px){
+    .container {
+        max-width: 770px;
+    }
+    main article .secaoSobreUsuario figure {
+        max-width: 140px;
+        height: 140px;
+    }
+    main article .secaoSobreUsuario .linha__coluna--direita{
+        flex-basis: 100%;
+    }
+    main article .secaoSobreUsuario .sobreUsuario {
+        max-width: 370px;
+    }
+    main article .secaoSobreUsuario .sobreUsuario__nome h2 {
+        font-size: 1.3rem;
+    }
+    main article .secaoSobreUsuario .sobreUsuario__nome button {
+        padding: 7px 10px;
+    }
+    main article .secaoDestaquesUsuario ul li figure img {
+        width: 80px;
+    }
+    main article .secaoDestaquesUsuario ul li h3 {
+        font-size: 0.8rem;
+    }
+    header ul li {
+        margin-left: 7px;
+    }
+    header a figure img {
+        width: 140px;
+    }
+    header ul li a img {
+        width: 22px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .container {
+        max-width: 840px;
+    }
+    main article .secaoDestaquesUsuario ul li h3 {
+        font-size: 0.9rem;
+    }
+    main article .secaoDestaquesUsuario ul li figure img {
+        width: 90px;
+    }
+    main article .secaoSobreUsuario figure  {
+        width: 150px;
+    }
+    main article .secaoSobreUsuario .sobreUsuario {
+        max-width: 440px;
+    }
+    main article .secaoSobreUsuario .sobreUsuario__nome h2 {
+        font-size: 1.4rem;
+    }
+    main article .secaoSobreUsuario .sobreUsuario__seguidores ul li a {
+        font-size: 1rem;
+    }
+    main article .secaoSobreUsuario .sobreUsuario__descricao h3 {
+        font-size: 1rem;
+    }
+    main article .secaoSobreUsuario .sobreUsuario__descricao p {
+        font-size: 0.9rem;
+    }
+}
